@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+    1) splayer play ;; # left click
+    4) splayer next ;; # scroll up
+    5) splayer prev ;; # scroll down
+esac
+
+if splayer status | grep 'Paused' > /dev/null; then
+    printf '\xef\x81\x8b ' # fa-play
+else
+    printf '\xef\x81\x8c ' # fa-pause
+fi
+splayer current-oneline

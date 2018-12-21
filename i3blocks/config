@@ -1,0 +1,14 @@
+separator_block_width=15
+markup=none
+
+[spotify]
+command=~/.config/i3/spotify_blocklet
+interval=1
+
+[kbdd_layout]
+command=~/.config/i3blocks/scripts/kbdd_layout
+interval=persist
+
+[time]
+command=date '+%d-%m-%Y %H:%M'
+interval=5
